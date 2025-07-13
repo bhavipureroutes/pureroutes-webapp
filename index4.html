@@ -26,7 +26,9 @@
 
         /* Header */
         header {
+            /* Changed background to white */
             background: white; 
+            /* Adjusted box-shadow for white background */
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
             position: fixed;
             width: 100%;
@@ -43,15 +45,31 @@
         }
 
         .logo-container {
+            /* This div now primarily serves as a container for the new rectangular logo */
             display: flex;
             align-items: center;
+            /* gap is not needed here as company name div is removed */
         }
 
+        /* Styles for the new rectangular logo image */
         .main-logo img {
             height: 60px; /* Set a fixed height for the logo to fit header */
             width: auto; /* Allow width to adjust proportionally to maintain aspect ratio */
             display: block; /* Ensures the image behaves as a block element */
         }
+
+        /* Removed old .logo-upload, .logo-upload:hover, .logo-upload input, .logo-preview
+           as they are no longer relevant for a static, rectangular logo */
+        
+        /* The .company-name div is removed from HTML, so this CSS rule is no longer needed */
+        /*
+        .company-name {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #2E7D32;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        */
 
         .nav-links {
             display: flex;
@@ -74,22 +92,6 @@
             transform: translateY(-2px);
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
-
-        /* New styles for Login/Signup button */
-        .nav-links .login-signup a {
-            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%); /* Green gradient background */
-            color: white; /* White text color */
-            padding: 10px 20px; /* Slightly more padding for a button feel */
-            border-radius: 50px; /* Highly rounded corners */
-            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3); /* Subtle shadow */
-        }
-
-        .nav-links .login-signup a:hover {
-            background: linear-gradient(135deg, #45a049 0%, #3d8c40 100%); /* Darker green on hover */
-            transform: translateY(-3px); /* Lift effect on hover */
-            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4); /* More pronounced shadow on hover */
-        }
-
 
         .mobile-menu {
             display: none;
@@ -459,14 +461,6 @@
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
-                flex-direction: column; /* Ensure mobile menu is vertical */
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: white; /* Changed mobile menu background to white */
-                padding: 20px;
-                box-shadow: 0 4px 20px rgba(0,0,0,0.1);
             }
             
             .mobile-menu {
@@ -486,19 +480,21 @@
                 grid-template-columns: 1fr;
             }
             
+            /* Adjust logo size for mobile if necessary */
             .main-logo img {
                 height: 50px; /* Slightly smaller logo for mobile */
                 width: auto;
             }
+
+            /* Removed company-name for mobile as well if logo is used */
+            /*
+            .company-name {
+                font-size: 1.8rem;
+            }
+            */
             
             .section-title {
                 font-size: 2.2rem;
-            }
-
-            /* Adjust login/signup button for mobile menu if needed */
-            .nav-links .login-signup a {
-                width: fit-content; /* Ensure it doesn't stretch full width */
-                margin: 10px auto; /* Center it in the mobile menu */
             }
         }
 
@@ -551,7 +547,7 @@
                 <li><a href="#vision">Vision</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#contact">Contact Us</a></li>
-                <li class="login-signup"><a href="#login">Login/Signup</a></li> </ul>
+            </ul>
             <div class="mobile-menu">
                 <span></span>
                 <span></span>
@@ -618,13 +614,13 @@
                 <div class="about-content">
                     <div class="about-text slide-in-left">
                         <h3 style="color: #2E7D32; margin-bottom: 20px; font-size: 1.5rem;">Our Journey</h3>
-                        <p>PureRoutes Retail India Private Limited was incorporated with a bold vision to streamline and optimize B2B supply chains in India's underserved markets. Formally established in February 2025, we evolved from the high-performing proprietorship firm Kanak Enterprises, founded in December 2023.</p>
+                        <p><strong>PureRoutes Retail India Pvt. Ltd.</strong> was founded in February 2025, evolving from Kanak Enterprises—a high-performing firm launched in December 2023.</p>
                         
-                        <p>Kanak Enterprises addressed the critical challenge of consistent, reliable supply of groceries and vegetables to construction companies in remote and Tier-3 regions. As a trusted sub-vendor to major infrastructure companies, we built our reputation serving 4 major clients across 8 states and 15+ remote locations.</p>
+                        <p>We tackled the challenge of reliable grocery and vegetable supply for construction sites across 15+ remote locations in 8 states, serving 4 major clients.</p>
                         
-                        <p>Our remarkable first-year performance, generating INR 2.59 Crores in revenue, demonstrated the scalability of our model. Recognizing the systemic gaps in supply chains across India's non-metro geographies, we restructured as PureRoutes to attract institutional backing and expand our operational scope.</p>
+                        <p>Our first-year revenue of ₹2.59 Cr validated our scalable model. Now, as PureRoutes, we aim to revolutionize B2B supply chains in non-metro India, connecting institutional food buyers with rural suppliers.</p>
                         
-                        <p><strong>Pure Routes is uniquely positioned to bridge the gap between institutional food buyers and fragmented rural supply chains, using technology and operational intelligence to bring consistency, affordability, and quality to India's Tier 2 and Tier 3 restaurant economy.</strong></p>
+                        <p>Through tech-driven operations, we deliver consistency, quality, and affordability to Tier 2 and Tier 3 restaurant markets.</p>
                     </div>
                     <div class="about-stats slide-in-right">
                         <div class="stat-item">
@@ -791,6 +787,21 @@
     </footer>
 
     <script>
+        // Removed original logo upload functionality as it's replaced by a static logo.
+        /*
+        function handleLogoUpload(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const logoContainer = document.querySelector('.logo-upload');
+                    logoContainer.innerHTML = `<img src="${e.target.result}" alt="Company Logo" class="logo-preview">`;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+        */
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -811,6 +822,14 @@
 
         mobileMenu.addEventListener('click', function() {
             navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            navLinks.style.flexDirection = 'column';
+            navLinks.style.position = 'absolute';
+            navLinks.style.top = '100%';
+            navLinks.style.left = '0';
+            navLinks.style.width = '100%';
+            navLinks.style.background = 'white'; /* Changed mobile menu background to white */
+            navLinks.style.padding = '20px';
+            navLinks.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
         });
 
         // Form submission
@@ -848,10 +867,10 @@
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.background = 'rgba(255, 255, 255, 0.95)'; /* Changed scroll background to white with transparency */
                 header.style.backdropFilter = 'blur(10px)';
             } else {
-                header.style.background = 'white';
+                header.style.background = 'white'; /* Changed initial background to white */
                 header.style.backdropFilter = 'none';
             }
         });
