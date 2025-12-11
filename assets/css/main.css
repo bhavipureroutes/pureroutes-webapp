@@ -146,7 +146,7 @@ h6 {
   --background-color: rgba(255, 255, 255, 0);
   --heading-color: #ffffff;
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: #fff;
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
@@ -157,7 +157,7 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 32px;
+  max-height: 36px;
   margin-right: 8px;
 }
 
@@ -202,7 +202,7 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: var(--nav-color);
+    /* color: var(--nav-color); */
     padding: 8px 20px;
     font-size: 14px;
     font-family: var(--nav-font);
@@ -226,6 +226,7 @@ h6 {
   .navmenu li:hover>a,
   .navmenu .active,
   .navmenu .active:focus {
+    color: var(--nav-color);
     background-color: var(--nav-hover-color);
   }
 

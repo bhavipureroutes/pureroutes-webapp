@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PureRoutes — Coming Soon</title>
+  <meta name="description" content="PureRoutes — Website coming soon. Contact us at communications@pureroutes.com" />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; /* dark navy */
+      --card:#0f1724;
+      --muted:#9aa4b2;
+      --accent:#06b6d4; /* teal */
+      --glass: rgba(255,255,255,0.03);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial}
+    body{
+      background: linear-gradient(180deg, #071026 0%, #071b2a 50%, #07202f 100%);
+      color:#e6eef6; -webkit-font-smoothing:antialiased;
+      display:flex;align-items:center;justify-content:center;padding:32px
+    }
+
+    .card{
+      width:100%;max-width:920px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:16px;padding:40px;box-shadow:0 10px 30px rgba(2,6,23,0.6);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.03);
+      display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center
+    }
+
+    .brand{display:flex;flex-direction:column;gap:20px}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo-mark{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700;color:#021426}
+    h1{margin:0;font-size:28px}
+    p.lead{margin:0;color:var(--muted);font-size:15px;line-height:1.6}
+
+    .countdown{display:flex;gap:12px;margin-top:6px}
+    .countdown .box{background:var(--glass);padding:12px 14px;border-radius:10px;text-align:center;min-width:68px}
+    .countdown .num{font-size:20px;font-weight:700}
+    .countdown .label{font-size:11px;color:var(--muted);margin-top:6px}
+
+    .contact{background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));border-radius:12px;padding:20px;border:1px solid rgba(255,255,255,0.02)}
+    .contact h3{margin:0 0 10px 0;font-size:16px}
+    .contact p{margin:6px 0;color:var(--muted);font-size:14px}
+    .info{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+    a.cta{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#7c3aed);color:#021426;font-weight:600;text-decoration:none;margin-top:10px}
+
+    footer{grid-column:1/-1;margin-top:20px;color:var(--muted);font-size:13px}
+
+    @media (max-width:880px){
+      .card{grid-template-columns:1fr;max-width:720px;padding:28px}
+      .countdown{flex-wrap:wrap}
+    }
+  </style>
+</head>
+<body>
+  <main class="card" role="main">
+    <section class="brand">
+      <div class="logo">
+        <div class="logo-mark">PR</div>
+        <div>
+          <h1>PureRoutes</h1>
+          <p class="lead">We’re building the Supplier Portal — transforming B2B food supply chains by bridging institutional buyers with rural suppliers across India’s Tier-2 & Tier-3 cities. Launching soon.</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="countdown" aria-hidden="true">
+          <div class="box"><div class="num" id="days">00</div><div class="label">Days</div></div>
+          <div class="box"><div class="num" id="hours">00</div><div class="label">Hours</div></div>
+          <div class="box"><div class="num" id="minutes">00</div><div class="label">Minutes</div></div>
+          <div class="box"><div class="num" id="seconds">00</div><div class="label">Seconds</div></div>
+        </div>
+        <p style="margin-top:12px;color:var(--muted);font-size:13px">Want early access or a quote? Reach out below — we reply fast.</p>
+      </div>
+
+      <div style="margin-top:6px">
+        <a class="cta" href="mailto:communications@pureroutes.com">📧 Email Us</a>
+        <a class="cta" style="margin-left:10px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--accent);text-decoration:none;" href="tel:+919343129234">📞 +91 93431 29234</a>
+      </div>
+    </section>
+
+    <aside class="contact" aria-label="Contact details">
+      <h3>Contact</h3>
+      <div class="info">
+        <p><strong>Phone</strong><br> +91 93431 29234</p>
+        <p><strong>Email</strong><br> communications@pureroutes.com</p>
+        <p><strong>Location</strong><br> Delhi, India</p>
+      </div>
+
+      <hr style="border:none;border-top:1px solid rgba(255,255,255,0.02);margin:14px 0">
+      <p style="font-size:13px;color:var(--muted);margin:0">Follow us on Instagram, LinkedIn, or Twitter for updates.</p>
+    </aside>
+
+    <footer>© <span id="year"></span> PureRoutes — Built with care. &nbsp;|&nbsp; communications@pureroutes.com</footer>
+  </main>
+
+  <script>
+    // simple countdown (adjust target date below)
+    const target = new Date();
+    // set to 20 days from now (example). Change as needed.
+    target.setDate(target.getDate() + 20);
+
+    function pad(n){return n.toString().padStart(2,'0')}
+    function tick(){
+      const now = new Date();
+      let diff = Math.max(0, target - now);
+      const days = Math.floor(diff / (1000*60*60*24));
+      diff -= days*(1000*60*60*24);
+      const hours = Math.floor(diff / (1000*60*60));
+      diff -= hours*(1000*60*60);
+      const minutes = Math.floor(diff / (1000*60));
+      diff -= minutes*(1000*60);
+      const seconds = Math.floor(diff/1000);
+      document.getElementById('days').textContent = pad(days);
+      document.getElementById('hours').textContent = pad(hours);
+      document.getElementById('minutes').textContent = pad(minutes);
+      document.getElementById('seconds').textContent = pad(seconds);
+    }
+    tick();
+    setInterval(tick, 1000);
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
