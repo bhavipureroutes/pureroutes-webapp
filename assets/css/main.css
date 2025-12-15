@@ -1020,11 +1020,11 @@ section,
   overflow: hidden;
 }
 
-.services .service-item .icon {
+/* .services .service-item .icon {
   position: absolute;
   left: -20px;
   top: calc(50% - 30px);
-}
+} */
 
 .services .service-item .icon i {
   font-size: 64px;
