@@ -202,3 +202,34 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".counter").forEach(counter => {
+    const target = parseFloat(counter.dataset.target);
+    const suffix = counter.dataset.suffix || "";
+    const isDecimal = counter.dataset.decimal === "true";
+
+    let current = 0;
+    const steps = 100;
+    const increment = target / steps;
+
+    const update = () => {
+      current += increment;
+
+      if (current < target) {
+        const value = isDecimal
+          ? current.toFixed(1)
+          : Math.floor(current);
+
+        counter.textContent = value + suffix;
+        requestAnimationFrame(update);
+      } else {
+        counter.textContent =
+          (isDecimal ? target.toFixed(1) : target) + suffix;
+      }
+    };
+
+    update();
+  });
+});
