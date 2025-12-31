@@ -642,7 +642,7 @@ section,
   line-height: 1px;
   margin: 0;
   letter-spacing: 1.5px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   color: color-mix(in srgb, var(--default-color), transparent 50%);
   position: relative;
 }
@@ -661,7 +661,7 @@ section,
   margin: 0;
   font-size: 28px;
   font-weight: 700;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-family: var(--heading-font);
 }
 
@@ -1063,6 +1063,7 @@ background: none;
   margin: 10px 0 15px 0;
   font-size: 22px;
   transition: ease-in-out 0.3s;
+  text-transform: capitalize;
 }
 
 .services .service-item p {
