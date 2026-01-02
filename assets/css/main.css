@@ -2630,9 +2630,9 @@ background: none;
   /* max-width: 100%; */
   width: 156px;
   /* max-height: 100%; */
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
   transition: all 0.3s ease-in-out;
-  background-color: #f0fff5;
+  /* background-color: #f0fff5; */
 }
 
 .clients .client-logo:hover img {
@@ -2697,4 +2697,30 @@ background: none;
   background-color: #4ea152;
   width: 14px;
   height: 14px;
+}
+
+
+/* Smooth Bootstrap Carousel Slide */
+#hero-carousel .carousel-item {
+  transition: transform 1.2s ease-in-out !important;
+}
+
+/* Improve background slide smoothness */
+#hero-carousel .carousel-item {
+  background-size: cover;
+  background-position: center;
+}
+
+/* Prevent jerk caused by fade/visibility */
+#hero-carousel .carousel-item-next,
+#hero-carousel .carousel-item-prev,
+#hero-carousel .carousel-item.active {
+  display: block;
+}
+
+/* Smooth text animation sync */
+#hero-carousel h2,
+#hero-carousel p,
+#hero-carousel .btn-get-started {
+  animation-duration: 1s;
 }
