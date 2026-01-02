@@ -2631,7 +2631,7 @@ background: none;
   /* max-height: 100%; */
   /* filter: grayscale(100%); */
   transition: all 0.3s ease-in-out;
-  background-color: #ddd;
+  background-color: #f0fff5;
 }
 
 .clients .client-logo:hover img {
