@@ -2627,8 +2627,8 @@ background: none;
 }
 
 .clients .client-logo img {
-  max-width: 100%;
-  width: 256px;
+  /* max-width: 100%; */
+  width: 156px;
   /* max-height: 100%; */
   filter: grayscale(100%);
   transition: all 0.3s ease-in-out;
