@@ -90,7 +90,8 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-      <div id="hero-carousel" data-bs-interval="5000" class="carousel carousel-fade" data-bs-ride="carousel">
+      <!-- Remove carousel-fade — fade disables sliding. -->
+      <div id="hero-carousel" data-bs-interval="3000" class="carousel" data-bs-ride="carousel">
 
         <!-- Slide 1 -->
       <div class="carousel-item active"
@@ -109,7 +110,7 @@
   </a>
 
   <a href="tel:9343129234"
-     class="btn-get-started animate__animated animate__fadeInUp">
+     class="btn-get-started btn-get-started-sec animate__animated animate__fadeInUp">
     Contact Now
   </a>
 </div>
@@ -119,7 +120,7 @@
 
  <!-- Slide 2 -->
       <div class="carousel-item"
-     style="background-image: url('assets/img/hero/banner2.png');">
+     style="background-image: url('assets/img/hero/banner2.webp');">
   <div class="carousel-container">
     <h2 class="animate__animated animate__fadeInDown">
       Transforming <span>B2B</span> Supply Chains
@@ -134,7 +135,7 @@
   </a>
 
   <a href="tel:9343129234"
-     class="btn-get-started animate__animated animate__fadeInUp">
+     class="btn-get-started btn-get-started-sec animate__animated animate__fadeInUp">
     Contact Now
   </a>
 </div>
@@ -158,20 +159,26 @@
   </a>
 
   <a href="tel:9343129234"
-     class="btn-get-started animate__animated animate__fadeInUp">
+     class="btn-get-started btn-get-started-sec animate__animated animate__fadeInUp">
     Contact Now
   </a>
 </div>
   </div>
 </div>
 
-        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+        <!-- <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
           <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
         </a>
 
         <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
           <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-        </a>
+        </a> -->
+
+          <div class="carousel-indicators">
+    <button data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active"></button>
+    <button data-bs-target="#hero-carousel" data-bs-slide-to="1"></button>
+    <button data-bs-target="#hero-carousel" data-bs-slide-to="2"></button>
+  </div>
 
       </div>
 
@@ -638,7 +645,7 @@
           <div class="icon">
             <i class="bi bi-diagram-3" style="color: #0dcaf0;"></i>
           </div>
-          <h3>STRUCTURED PROCUREMENT GOVERNANCE</h3>
+          <h3>Structured Procurement Governance</h3>
           <p>We design and manage controlled procurement frameworks using existing local and regional suppliers — with defined quality standards, fallback logic, and escalation rules. <br> <strong>Result:</strong> consistent supply without daily vendor firefighting.</p>
         </div>
       </div>
@@ -650,7 +657,7 @@
           <div class="icon">
             <i class="bi bi-truck-front" style="color: #fd7e14;"></i>
           </div>
-          <h3>PARTNER-LED LOGISTICS ORCHESTRATION</h3>
+          <h3>Partner Led Logistics Orchestration</h3>
           <p>Rather than owning trucks, we govern delivery behaviour through route discipline, cut-off controls, and performance SLAs across partner logistics networks. <br> <strong>Result:</strong> reliable last-mile execution without asset lock-in.</p>
         </div>
       </div>
@@ -662,7 +669,7 @@
           <div class="icon">
             <i class="bi bi-sliders2-vertical" style="color: #20c997;"></i>
           </div>
-          <h3>TECH-ENABLED CONTROL SYSTEMS</h3>
+          <h3>Tech Enabled Control Systems</h3>
           <p>Centralised ordering, visibility, and exception handling — built for teams managing multiple cities simultaneously. <br> <strong>Result:</strong> fewer surprises as footprint expands.</p>
         </div>
       </div>
@@ -674,7 +681,7 @@
           <div class="icon">
             <i class="bi bi-map" style="color: #df1529;"></i>
           </div>
-          <h3>CITY-WISE PLANNING INTELLIGENCE</h3>
+          <h3>City-Wise Planning Intelligence</h3>
           <p>Operational insights derived from non-metro execution — including category volatility, substitution planning, and city-specific constraints.
           <br> <strong>Result:</strong> better expansion decisions before issues surface.</p>
         </div>
@@ -687,7 +694,7 @@
           <div class="icon">
             <i class="bi bi-graph-up-arrow" style="color: #6610f2;"></i>
           </div>
-          <h3>EXPANSION-READY COMMERCIAL STRUCTURING</h3>
+          <h3>Expansion-Ready Commercial Structuring</h3>
           <p>Commercial frameworks designed to reduce rollout friction during early expansion phases — while preserving long-term discipline.
           <br> <strong>Result:</strong> launches move faster without compromising control.</p>
         </div>
@@ -700,7 +707,7 @@
           <div class="icon">
             <i class="bi bi-layers" style="color: #f3268c;"></i>
           </div>
-          <h3>HYPERLOCAL REPLICATION PLAYBOOKS</h3>
+          <h3>Hyperlocal Replication Playbooks</h3>
           <p>Proven operating playbooks that translate metro SOPs into non-metro reality — without over-engineering or quality drift.
           <br> <strong>Result:</strong> repeatable city launches.</p>
         </div>

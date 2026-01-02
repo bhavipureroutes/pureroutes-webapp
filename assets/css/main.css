@@ -768,6 +768,13 @@ background: none;
   text-decoration: none;
 }
 
+.hero .btn-get-started-sec{
+  background: var(--accent-color);
+}
+.hero .btn-get-started-sec:hover{
+  background: transparent;
+}
+
 @media (min-width: 1024px) {
   .hero p {
     max-width: 60%;
@@ -2673,4 +2680,19 @@ background: none;
   .whatsapp-float i {
     font-size: 24px;
   }
+}
+
+
+#hero .carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ebf6eb;
+  margin: 0 6px;
+}
+
+#hero .carousel-indicators .active {
+  background-color: #4ea152;
+  width: 14px;
+  height: 14px;
 }
