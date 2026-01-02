@@ -233,19 +233,3 @@ document.addEventListener("DOMContentLoaded", () => {
     update();
   });
 });
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  const currentPath = window.location.pathname.split("/").pop();
-
-  document.querySelectorAll(".navmenu a").forEach(link => {
-    const linkPath = link.getAttribute("href");
-
-    if (linkPath === currentPath) {
-      document.querySelectorAll(".navmenu a.active")
-        .forEach(el => el.classList.remove("active"));
-
-      link.classList.add("active");
-    }
-  });
-});
